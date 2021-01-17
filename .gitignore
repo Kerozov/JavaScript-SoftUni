@@ -1,9 +1,7 @@
 Demo/
 Resources/
-REST-Services/
-Tools/
+
 node_modules/
-NNode.js/
 
 demo.js*
 demo.html*
