@@ -18,7 +18,7 @@ function getDayOfWeek(day){
              result = 5;
              break;
              case 'Saturday':
-                result = 6;
+                result = 6; 
                 break;
                 case 'Sunday':
                     result = 7;
@@ -31,4 +31,4 @@ function getDayOfWeek(day){
 
 }
 
-getDayOfWeek('Friday');
+getDayOfWeek('Friday'); 
