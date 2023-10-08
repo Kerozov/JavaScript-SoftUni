@@ -5,8 +5,21 @@
     <title>Edit Element</title>
 </head>
 <body>
-<h1 id="e1">Hello, %insert name here%!</h1>
-<button onclick="editElement(document.getElementById('e1'), '%insert name here%', 'Document Object Model')">Edit Element</button>
-<script src="EditElement.js"></script>
+<h1 id="e1">Hello, %insert you text here%!</h1>
+<input type="text" id="inputText" placeholder="New text" required>
+<button id="submitButton">Edit Element</button>
+<script>
+    function editElement(ref, match, replacer) {
+      const matcher = new RegExp(match, 'g');
+      const result = ref.textContent.replace(matcher, replacer);
+      ref.textContent = result;
+    }
+  const submitButton = document.getElementById("submitButton");
+  const e1 = document.getElementById("e1");
+  const inputText = document.getElementById("inputText");
+  
+  submitButton.addEventListener("click", function() {
+    editElement(e1, '%insert you text here%', inputText.value);
+  });
+  </script>
 </body>
-</html>
